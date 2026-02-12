@@ -15,15 +15,18 @@ body {
     min-height: 100vh;
 }
 
+/* ---------------- SIDEBAR ---------------- */
+
 .sidebar {
     width: 30%;
     background-color: #263247;
-    padding: 40px;
+    padding: 40px 20px;
     text-align: center;
 }
 
 .sidebar img {
-    width: 200px;
+    width: 180px;
+    max-width: 100%;
     border-radius: 12px;
     margin-bottom: 20px;
 }
@@ -37,11 +40,13 @@ body {
     padding: 8px;
     border-radius: 20px;
     margin-bottom: 20px;
+    display: inline-block;
 }
 
 .contact p {
     margin: 8px 0;
     font-size: 14px;
+    word-wrap: break-word;
 }
 
 .socials {
@@ -54,15 +59,18 @@ body {
     color: #ffd166;
     margin: 8px 0;
     transition: 0.3s;
+    font-size: 14px;
 }
 
 .socials a:hover {
     color: white;
 }
 
+/* ---------------- MAIN ---------------- */
+
 .main {
     width: 70%;
-    padding: 60px;
+    padding: 60px 40px;
 }
 
 section {
@@ -80,7 +88,10 @@ ul {
 
 ul li {
     margin-bottom: 10px;
+    line-height: 1.6;
 }
+
+/* ---------------- BUTTON ---------------- */
 
 .resume-btn a {
     background: #ffd166;
@@ -90,8 +101,64 @@ ul li {
     border-radius: 8px;
     font-weight: 600;
     transition: 0.3s;
+    display: inline-block;
 }
 
 .resume-btn a:hover {
     background: white;
+}
+
+/* ===================================================== */
+/* ================== MOBILE RESPONSIVE ================= */
+/* ===================================================== */
+
+@media (max-width: 900px) {
+
+    .container {
+        flex-direction: column;
+    }
+
+    .sidebar {
+        width: 100%;
+        padding: 30px 20px;
+    }
+
+    .main {
+        width: 100%;
+        padding: 30px 20px;
+    }
+
+    h1 {
+        font-size: 20px;
+    }
+
+    .sidebar img {
+        width: 140px;
+    }
+
+    .contact p,
+    .socials a,
+    ul li {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 480px) {
+
+    body {
+        font-size: 14px;
+    }
+
+    h1 {
+        font-size: 18px;
+    }
+
+    .sidebar img {
+        width: 120px;
+    }
+
+    .resume-btn a {
+        width: 100%;
+        text-align: center;
+    }
 }
